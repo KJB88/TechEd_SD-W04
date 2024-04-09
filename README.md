@@ -12,19 +12,21 @@
 </div>
 <section>
 <h2>Project Outline</h2>
-<p>TODO</p>
-  <p><b>All requirements and stretch goals were TODO No specific difficulties.</b></p>
+<p>Develop a front-end page for a Guest Book and a persistent back-end to handle POST requests and populate the website with user content. The front-end must be usable on different devices (mobile responsive) and have implementation to handle common accessibility concerns.</p>
+  <p><b>All requirements and stretch goals are being worked on.</b></p>
 </section>
 <section>
 <h2>Requirements</h2>
 <ul>
-<li>TODO - <b>TODO</b></li>
+<li><b>'90s Kid</b>: Have a mobile-responsive, accessible and functional website for users to view messages in the Guest Book.</li>
+<li><b>Trolling the Forums</b>: Allow users to leave a message in the Guest Book for others to read.</li>
 </ul>
 </section>
 <section>
 <h2>Stretch Goals</h2>
 <ul>
-<li>TODO - <b>TODO</b></li>
+<li><b>Damage Control</b>: Give the user the option to delete a message, preferably their own!</li>
+<li><b>Dopamine Hit</b>: Allow the user to like a message, which will increment a like counter on the message.</li>
 </ul>
 </section>
 <section>
