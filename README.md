@@ -16,17 +16,37 @@
   <p><b>All requirements and stretch goals are being worked on.</b></p>
 </section>
 <section>
+  <h2>User Stories</h2>
+  <h3>As a User...</h3>
+  <ul>
+    <li>I want to visit the website and read information on my phone or computer.</li>
+    <li>I want to be able to leave a message in the guestbook.</li>
+    <li>I want to be able to see the messages that have been left in the guestbook.</li>
+  </ul>
+</section>
+<section>
 <h2>Requirements</h2>
 <ul>
 <li><b>'90s Kid</b>: Have a mobile-responsive, accessible and functional website for users to view messages in the Guest Book.</li>
+  <ul>
+    <li>Get a shiny form on the go so the user can share their 'interesting' stories about that thing no one cares about.</li>
+    <li>Get that page showing all those messages! (Yes, even the messages from Tim.)</li>
+    <li>Style it so that users can enjoy the flame wars from their handheld and/or desktop (mmm, multi-tasking).</li>
+  </ul>
+  <br>
 <li><b>Trolling the Forums</b>: Allow users to leave a message in the Guest Book for others to read.</li>
+  <ul>
+    <li>API Post route those definitely not-mean comments from the input form.</li>
+    <li>Setup and whack that data into a database. <em>*laughs maniacally in SQL*</em></li>
+    <li>API Get route all those lovely, completely civil and polite messages from the DB.</li>
+  </ul>
 </ul>
 </section>
 <section>
 <h2>Stretch Goals</h2>
 <ul>
-<li><b>Damage Control</b>: Give the user the option to delete a message, preferably their own!</li>
-<li><b>Dopamine Hit</b>: Allow the user to like a message, which will increment a like counter on the message.</li>
+<li><b>Damage Control</b>: Give the user the option to <b>delete</b> a message, preferably their own!</li>
+<li><b>Dopamine Hit</b>: Allow the user to <b>like</b> a message, which will increment a <b>like counter</b> on the message.</li>
 </ul>
 </section>
 <section>
