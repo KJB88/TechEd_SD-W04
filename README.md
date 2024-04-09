@@ -36,9 +36,9 @@
   <br>
 <li><b>Trolling the Forums</b>: Allow users to leave a message in the Guest Book for others to read.</li>
   <ul>
-    <li>API Post route those definitely not-mean comments from the input form.</li>
+    <li>API POST route those definitely not-mean comments from the input form.</li>
     <li>Setup and whack that data into a database. <em>*laughs maniacally in SQL*</em></li>
-    <li>API Get route all those lovely, completely civil and polite messages from the DB.</li>
+    <li>API GET route all those lovely, completely civil and polite messages from the DB.</li>
   </ul>
 </ul>
 </section>
