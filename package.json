@@ -1,0 +1,17 @@
+{
+  "name": "teched_sd-w04",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">\r   <h1>:mortar_board: Tech Educators' SWD Bootcamp :mortar_board:<br/>:mortar_board: Week 04 Assessment :mortar_board:</h1>\r   <p>\r     <a href=\"http://www.LinkedIn.com/in/kevin-barr1988\">LinkedIn</a> |\r     <a href=\"http://kjb88.github.io\">Website</a> |\r     <a href=\"mailto:kevinbarr.business@gmail.com\">Email</a> |\r     <a href=\"https://github.com/KJB88\">Github</a>\r   </p>\r <p>\r   Repository for coursework for TechEd Software Development Bootcamp - Week 04\r </p>\r </div>\r <section>\r <h2>Project Outline</h2>\r <p>TODO</p>\r   <p><b>All requirements and stretch goals were TODO No specific difficulties.</b></p>\r </section>\r <section>\r <h2>Requirements</h2>\r <ul>\r <li>TODO - <b>TODO</b></li>\r </ul>\r </section>\r <section>\r <h2>Stretch Goals</h2>\r <ul>\r <li>TODO - <b>TODO</b></li>\r </ul>\r </section>\r <section>\r <h2>Implementation (of Requirements)</h2>\r   <h3>TODO</h3>\r   <p>TODO</p>\r </section>\r <section>\r   <h2>Implementation (of Stretch Goals)</h2>\r   <h3>TODO</h3>\r   <p>\r TODO\r   </p>\r </section>\r <section>\r   <h2>Honorary Mentions</h2>\r   <h3>TODO</h3>\r   TODO\r </section>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.2.8"
+  }
+}
