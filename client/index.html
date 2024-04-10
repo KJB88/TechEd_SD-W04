@@ -5,14 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Shut up Favicon -->
+    <link rel="shortcut icon" href="#">
+
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/common.css" />
     <link rel="stylesheet" href="./assets/css/core.css" />
     <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+
     <!-- JS -->
+    <script src="./assets/js/common/helper.js" type="module" defer></script>
+    <script src="./assets/js/common/bouncingRainbowText.js" type="module" defer></script>
     <script src="./assets/js/app.js" type="module" defer></script>
 
-    <title>Everything is Tim: Totally Original Guestbook!</title>
+    <title>Everything about Tim: Totally Original Guestbook!</title>
 </head>
 
 <body>
@@ -21,7 +29,8 @@
         <nav>
             <ul>
                 <li class="drop-shadow-2px">
-                    <h1 class="no-pointer-events">Everything is Tim: Totally Original Guestbook!</h1>
+                    <h1 class="no-pointer-events">Everything about Tim</h1>
+                    <h2 class="no-pointer-events subtitle">Totally Original Guestbook</h2>
                 </li>
                 <li>
                     <a href="https://github.com/KJB88/TechEd_SD-W04" class="drop-shadow-2px">Repo</a>
@@ -46,7 +55,8 @@
 
     <!-- FOOTER -->
     <footer>
-
+        <div class="drop-shadow-2px" id="rainbow-text"
+            aria-label="The author's signature and apparent attempt at having some level of creativity.">Kev Barr</div>
     </footer>
 </body>
 

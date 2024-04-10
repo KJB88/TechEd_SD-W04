@@ -1,3 +1,5 @@
+import { stepValue } from "./helper.js";
+
 /* BOUNCING RAINBOW TEXT */
 /* -------------------- */
 // #region INIT. & VARS
