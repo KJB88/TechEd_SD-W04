@@ -1,8 +1,6 @@
-import Database from "better-sqlite3";
+import { db } from "./dbHandler.js";
 
-const db = new Database("guestbook.db");
-
-// EXAMPLE QUERY
+/* Create Tables */
 db.exec(`
 CREATE TABLE messages (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -10,6 +8,7 @@ CREATE TABLE messages (
       )
       `);
 
+/* Populate Tables */
 db.prepare(
   `INSERT INTO messages (body) VALUES
     (?)`
