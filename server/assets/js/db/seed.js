@@ -4,12 +4,15 @@ import { db } from "./dbHandler.js";
 db.exec(`
 CREATE TABLE messages (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        body TEXT 
+        author TEXT,
+        message TEXT
       )
 `);
 
 /* Populate Tables */
-db.prepare(
-  `INSERT INTO messages (body) VALUES
-    (?)`
-).run("Hello this is a message.");
+export const insertMessage = db.prepare(
+  `INSERT INTO messages (author, message) VALUES
+    (?, ?)`
+);
+
+insertMessage.run("Kev", "Hello this is a message!");

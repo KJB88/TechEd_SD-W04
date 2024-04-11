@@ -1,6 +1,7 @@
 import { app } from "./server.js";
 import { addNewMessage } from "./dbhandler.js";
 
+/*
 // EXAMPLE POST
 app.post("/message", function (request, response) {
   const newMessage = request.body;
@@ -9,3 +10,4 @@ app.post("/message", function (request, response) {
 
   // TODO: Handle response based on query success/fail
 });
+*/
