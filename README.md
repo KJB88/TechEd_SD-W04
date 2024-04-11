@@ -50,6 +50,15 @@
 </ul>
 </section>
 <section>
+<h2>Project Structure</h2>
+  <h3>Client</h3>
+    <p>TODO</p>
+  <h3>Server</h3>
+    <p>TODO</p>
+  <h3>Database</h3>
+    <p>TODO</p>
+</section>
+<section>
 <h2>Implementation (of Requirements)</h2>
   <h3>TODO</h3>
   <p>TODO</p>
