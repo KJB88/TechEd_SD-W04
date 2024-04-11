@@ -12,15 +12,3 @@ app.get("/", function (request, response) {
 app.listen(8080, function () {
   console.log("Listening on 8080.");
 });
-
-/* TEST */
-// EXAMPLE GET
-app.get("/random", function (request, response) {
-  response.json(Math.random());
-});
-
-/* Get all messages and stuff them in the response */
-app.get("/messages", function (request, response) {
-  const messages = getAllMessages();
-  response.json(messages);
-});
