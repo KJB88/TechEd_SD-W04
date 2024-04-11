@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { getAllMessages, getRandom } from "./getHandler";
+import { getAllMessages, getRandom } from "./getHandler.js";
 
 const app = express();
 app.use(cors());
