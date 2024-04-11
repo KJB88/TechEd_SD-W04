@@ -1,4 +1,4 @@
-import { getAllMessages } from "./db/dbHandler.js";
+import { getAllMessagesFromDB } from "./db/dbHandler.js";
 
 /* Get a random number! Ye olde test method! */
 export function getRandom(response) {
