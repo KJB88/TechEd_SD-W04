@@ -7,6 +7,6 @@ export function getRandom(response) {
 
 /* Get all messages and stuff them in the response */
 export function getAllMessages(request, response) {
-  const messages = getAllMessages();
+  const messages = getAllMessagesFromDB();
   response.json(messages);
 }

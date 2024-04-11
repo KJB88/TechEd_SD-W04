@@ -2,7 +2,7 @@ import Database from "better-sqlite3";
 export const db = new Database("guestbook.db");
 
 /* Get all messages in the DB */
-export function getAllMessages() {
+export function getMessagesFromDB() {
   return db.prepare("SELECT * FROM messages").all();
 }
 
