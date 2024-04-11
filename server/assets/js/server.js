@@ -1,7 +1,14 @@
 import express from "express";
 import cors from "cors";
-import { getAllMessages, getRandom } from "./getHandler.js";
 
+// Get Routing
+import { getAllMessages } from "./getHandler.js";
+import { getRandom } from "./getHandler.js";
+
+// Post Routing
+//import postHandler from "./postHandler.js";
+
+/* Set up server with necessary technologies */
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -12,7 +19,7 @@ app.get("/", function (request, response) {
   response.json("Hitting root route. Stop it.");
 });
 
-/* Get messages */
+/* Get random number */
 app.get("/random", (request, response) => {
   getRandom(response);
 });

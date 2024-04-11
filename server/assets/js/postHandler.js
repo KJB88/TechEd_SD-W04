@@ -1,6 +1,3 @@
-import { app } from "./server.js";
-import { addNewMessage } from "./dbhandler.js";
-
 /*
 // EXAMPLE POST
 app.post("/message", function (request, response) {

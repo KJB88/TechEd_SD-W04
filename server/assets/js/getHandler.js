@@ -1,4 +1,4 @@
-import { getAllMessagesFromDB } from "./db/dbHandler.js";
+import { selectAllMessages } from "./db/dbHandler.js";
 
 /* Get a random number! Ye olde test method! */
 export function getRandom(response) {
@@ -8,6 +8,6 @@ export function getRandom(response) {
 
 /* Get all messages and stuff them in the response */
 export function getAllMessages(request, response) {
-  const messages = getAllMessagesFromDB();
+  const messages = selectAllMessages();
   response.json(messages);
 }
