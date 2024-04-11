@@ -13,13 +13,13 @@ app.get("/", function (request, response) {
 });
 
 /* Get messages */
-app.get("/random", () => {
-  getRandom();
+app.get("/random", (request, response) => {
+  getRandom(response);
 });
 
 /* Get messages */
-app.get("/messages", () => {
-  getAllMessages();
+app.get("/messages", (request, response) => {
+  getAllMessages(request, response);
 });
 
 /* Good people, lend me your ears! */

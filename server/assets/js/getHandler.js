@@ -2,7 +2,8 @@ import { getAllMessagesFromDB } from "./db/dbHandler.js";
 
 /* Get a random number! Ye olde test method! */
 export function getRandom(response) {
-  return response.json(Math.random());
+  const rand = Math.random();
+  return response.json(rand);
 }
 
 /* Get all messages and stuff them in the response */

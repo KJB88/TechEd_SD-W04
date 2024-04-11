@@ -6,7 +6,7 @@ CREATE TABLE messages (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         body TEXT 
       )
-      `);
+`);
 
 /* Populate Tables */
 db.prepare(
