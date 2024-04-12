@@ -39,6 +39,6 @@ const selectAllMessages = db.prepare("SELECT * FROM messages");
 
 const deleteMessage = db.prepare(`DELETE FROM messages WHERE id = ?`);
 
-const updateMessageLikes = db.prepare("UPDATE messages SET likes = ");
+const updateMessageLikes = db.prepare(`UPDATE messages SET likes = likes + 1`);
 // #endregion QUERIES
 /* -------------------- */

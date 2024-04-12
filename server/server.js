@@ -63,15 +63,24 @@ app.post("/message", (request, response) => {
   response.send();
 });
 
+// #endregion POST ROUTING
+/* -------------------- */
+// #region DEL ROUTING
+
 app.delete("/message", (request, response) => {
   console.log(`DEL: ${request.body}`);
   deleteMessage(request.body);
-  // TODO: POST STUFF
+  // TODO: DEL STUFF
 });
+
+// #endregion DEL ROUTING
+/* -------------------- */
+// #region PUT ROUTING
 
 app.put("/message", (request, response) => {
   console.log(`PUT: ${request.body}`);
-  // TODO: POST STUFF
+  // TODO: PUT STUFF
 });
-// #endregion POST ROUTING
+
+// #endregion PUT ROUTING
 /* -------------------- */
