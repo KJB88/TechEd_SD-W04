@@ -1,7 +1,13 @@
-import { getAllMessages } from "./db/dbHandler.js";
+/* GET ROUTE HANDLING */
+/* -------------------- */
+// #region IMPORT ACCESSORS
+import { getAllMessages } from "./dbHandler.js";
+
+// #endregion IMPORT ACCESSORS
+/* -------------------- */
+// #region GET ROUTING
 
 export function root() {
-  console.log("/ was called.");
   return "Stop hitting root!";
 }
 /* Get a random number! Ye olde test method! */
@@ -11,6 +17,8 @@ export function random() {
 
 /* Get all messages and stuff them in the response */
 export function allMessages() {
-  const messages = getAllMessages();
-  return messages;
+  return getAllMessages();
 }
+
+// #endregion GET ROUTING
+/* -------------------- */

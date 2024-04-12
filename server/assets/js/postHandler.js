@@ -1,10 +1,17 @@
-/*
-// EXAMPLE POST
-app.post("/message", function (request, response) {
-  const newMessage = request.body;
+/* GET ROUTE HANDLING */
+/* -------------------- */
+// #region IMPORTS
 
-  addNewMessage(request.body); // TODO: Is request.body the right option for the message?
+import { postMessage } from "./dbHandler.js";
 
-  // TODO: Handle response based on query success/fail
-});
-*/
+// #endregion IMPORTS
+/* -------------------- */
+// #region POST ROUTING
+
+/* Add a new message to the guest book DB. */
+export function addNewMessage(requestBody) {
+  postMessage(requestBody.author, requestBody.message);
+}
+
+// #endregion POST ROUTING
+/* -------------------- */

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm install",
-    "start": "node assets/js/server.js assets/js/getHandler.js assets/js/postHandler.js assets/js/db/dbHandler.js"
+    "start": "node ./server.js ./assets/js/dbHandler.js ./assets/js/getHandler.js ./assets/js/postHandler.js ./assets/js/delHandler.js"
   },
   "keywords": [],
   "author": "",
