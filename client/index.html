@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/css/footer.css" />
 
     <!-- JS -->
+
     <script src="./assets/js/helper.js" type="module" defer></script>
     <script src="./assets/js/wordlibs.js" type="module" defer></script>
     <script src="./assets/js/bouncingRainbowText.js" type="module" defer></script>
@@ -48,30 +49,52 @@
             </ul>
         </nav>
     </header>
+
     <!-- MAIN -->
     <main>
-        <div id="info-panel">
-            <p>Welcome to 'Everything about Tim'! The Totally Original Guestbook™ (Do not steal!!1!). The fictional fan
-                club for the best teacher that ever was, is and will be. Hang around and drop us a message to tell us
-                how much you love his shiny bald head and his magnificent coding beard.</p>
-        </div>
-        <div id="content-panel">
+
+        <!-- Description / Info Panel-->
+        <section id="content-panel" aria-label="A description of the site's use case. One man's obsession for another.">
+            <section class="info-panel">
+                <div class="drop-shadow-2px">
+                    Welcome to 'Everything about Tim'! The Totally Original Guestbook™ (Do not steal!!1!one!)!
+                </div>
+                <div class="drop-shadow-2px">
+                    The fictional fan club for the teacher with awful(ly good!) jokes and a penchant for forgetting
+                    what he's doing.
+                </div>
+            </section>
+
             <!-- Input Form -->
             <section aria-label="The input form to post messages to the guestbook.">
                 <form id="input-form" class="drop-shadow-2px">
-                    <label for="name-input" class="drop-shadow-2px form-label">Name</label>
-                    <input id="name-input" class="drop-shadow-2px" type="text" label="Name:"
+                    <label for="name-input" class="drop-shadow-2px form-label no-pointer-events">Name</label>
+                    <input name="name" id="name-input" class="drop-shadow-2px" type="text" label="Name:"
                         placeholder="Type your name in here!" />
-                    <label for="message-input" class="drop-shadow-2px form-label">Message</label>
-                    <textarea id="message-input" class="drop-shadow-2px" rows="4" cols="20"
+                    <label for="message-input" class="drop-shadow-2px form-label no-pointer-events">Message</label>
+                    <textarea name="message" id="message-input" class="drop-shadow-2px" rows="4" cols="20"
                         placeholder="Type your message here!"></textarea>
                     <button id="submit-btn" class="drop-shadow-2px">Post your Message</button>
                 </form>
             </section>
+
             <!-- Message Log -->
             <section aria-label="The contents of the guestbook." id="message-log">
+                <div class="entry-container">
+                    <!-- LOCAL TESTING
+                    <div class="like-div">
+                        <img class="like-btn" src="./assets/img/arrowUp.png" />
+                        <span class="like-container">0</span>
+                    </div>
+                    <span class="name-container drop-shadow-2px">Kev
+                    </span>
+                    <span class="message-container drop-shadow-2px">KevKevKevKevKev
+                    </span>
+                    <img class="del-btn" src="./assets/img/cross.png" />
+                    -->
+                </div>
             </section>
-        </div>
+        </section>
     </main>
 
     <!-- FOOTER -->

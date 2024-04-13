@@ -9,7 +9,7 @@ db.exec("DROP TABLE IF EXISTS messages");
 db.exec(`
 CREATE TABLE IF NOT EXISTS messages (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        author TEXT NOT NULL,
+        name TEXT NOT NULL,
         message TEXT NOT NULL,
         likes INTEGER DEFAULT 0
       )
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS messages (
 
 /* Populate Tables */
 const seedInsert = db.prepare(
-  `INSERT INTO messages (author, message) VALUES 
+  `INSERT INTO messages (name, message) VALUES 
   (?, ?)`
 );
 

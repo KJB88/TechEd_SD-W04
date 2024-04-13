@@ -10,7 +10,7 @@ import { postMessage } from "./dbHandler.js";
 
 /* Add a new message to the guest book DB. */
 export function addNewMessage(requestBody) {
-  return postMessage(requestBody.author, requestBody.message);
+  return postMessage(requestBody.name, requestBody.message);
 }
 
 // #endregion POST ROUTING

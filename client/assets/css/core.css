@@ -3,7 +3,6 @@ body {
   /* Functionality */
   scroll-behavior: smooth;
   overflow-x: hidden; /* To stop X overflow from creating a horizontal scroll bar */
-  overflow-y: hidden; /* To stop Y overflow from creating a vertical scroll bar */
 
   /* Formatting */
   margin: 0;

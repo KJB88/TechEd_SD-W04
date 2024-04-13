@@ -17,24 +17,27 @@ export function getAllMessages() {
 }
 
 /* Add a message to the DB. */
-export function postMessage(author, message) {
-  return insertMessage.run(author, message);
+export function postMessage(name, message) {
+  insertMessage.run(name, message);
+  return selectAllMessages.all();
 }
 
 /* Remove a message from the DB, specified by id */
 export function removeMessage(id) {
-  return deleteMessage.run(id);
+  deleteMessage.run(id);
+  return selectAllMessages.all();
 }
 
 export function incrementLikeCount(id) {
-  return updateMessageLikes.run(id);
+  updateMessageLikes.run(id);
+  return selectAllMessages.all();
 }
 // #endregion DB HANDLING
 /* -------------------- */
 // #region QUERIES
 
 const insertMessage = db.prepare(
-  `INSERT INTO messages (author, message) VALUES
+  `INSERT INTO messages (name, message) VALUES
       (?, ?)`
 );
 

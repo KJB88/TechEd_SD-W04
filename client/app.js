@@ -3,6 +3,10 @@
 // #region IMPORTS
 
 import { buildMessage } from "./assets/js/elementFactory.js";
+import { clearEntries } from "./assets/js/elementFactory.js";
+
+import { getMessages } from "./assets/js/networkHandler.js";
+import { postMessage } from "./assets/js/networkHandler.js";
 
 // #endregion IMPORTS
 /* -------------------- */
@@ -16,26 +20,51 @@ const messageInput = document.getElementById("message-input");
 /* -------------------- */
 // #region HOOKS
 
-/* Submit handling */
-inputForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  console.log("submit");
-  // TODO: POST
+// Initialize app when DOM loaded
+window.onload = () => {
+  clearEntries();
+  getMessages(buildMessage);
+};
+
+// Stop ENTER from submitting and instead skip to next
+nameInput.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") messageInput.focus();
 });
 
-/* Pressing ENTER to submit because I'm lazy. */
-inputForm.addEventListener("keydown", (e) => {
+// Submit handling
+inputForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  if (e.key == "Enter") console.log("enter");
-  // TODO: POST
+  e.stopImmediatePropagation(); // Consume event
+  readFormData(e);
+  console.log("SUBMIT");
 });
 
 // #endregion HOOKS
 /* -------------------- */
 // #region FORBIDDEN MAGIC
 
-buildMessage([{ id: "1", name: "Kev", message: "Blah blah blah!" }]);
+function readFormData(submitEvent) {
+  const formData = new FormData(submitEvent.target);
+  const values = Object.fromEntries(formData);
 
+  postMessage(values, onPostCallback);
+  nameInput.value = "";
+  messageInput.value = "";
+}
+
+function onPostCallback(data) {
+  clearEntries();
+  buildMessage(data);
+}
+
+export function onDeleteCallback(data) {
+  clearEntries();
+  buildMessage(data);
+}
+
+export function onPutCallback(data) {
+  clearEntries();
+  buildMessage(data);
+}
 // #endregion FORBIDDEN MAGIC
 /* -------------------- */

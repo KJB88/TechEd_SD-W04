@@ -9,15 +9,14 @@ body {
   background-position: top left;
 }
 
+/* The glue that holds my messaging madness together */
 #content-panel {
   z-index: 2;
   display: flex;
   flex-flow: column nowrap;
-  width: 66%;
-  height: 100%;
+  width: 75%;
+  height: auto;
 
-  left: 0;
-  top: 0;
   margin-top: 17.5vh;
   margin-left: auto;
   margin-right: auto;
@@ -26,7 +25,24 @@ body {
   border-left: 5px solid black;
   border-right: 5px solid black;
   border-bottom: 2px solid black;
+  box-sizing: border-box;
   background-color: var(--rgba-pink-translucent);
+}
+
+.info-panel {
+  width: 95%;
+  height: max-content;
+
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  top: 0;
+  left: 0;
+
+  font-weight: bold;
+  font-size: 0.95rem;
+
+  text-align: center;
 }
 
 /* New Message Form */
@@ -36,16 +52,24 @@ body {
 
   align-items: center;
   margin-bottom: 5px;
+  border-top: 2.5px black solid;
+  box-sizing: border-box;
 }
 
-#name-input,
+#author-input,
 #message-input {
   font-family: sans-serif;
-  width: 95%;
   border: 2.5px black solid;
+  box-sizing: border-box;
 }
-#name-input {
+
+#author-input {
   height: 20px;
+  width: 25%;
+}
+
+#message-input {
+  width: 75%;
 }
 
 .form-label {
@@ -55,9 +79,10 @@ body {
 
 #submit-btn {
   border: 2.5px black solid;
+  box-sizing: border-box;
   margin-top: 5px;
   margin-bottom: 5px;
-  width: 95%;
+  width: 25%;
   height: 25px;
 }
 
@@ -66,31 +91,80 @@ body {
   display: flex;
   flex-flow: column wrap;
   border-top: 3px black solid;
+  box-sizing: border-box;
 }
 
 .entry-container {
   display: flex;
   flex-flow: row nowrap;
   border-bottom: 3px black solid;
-  align-items: center;
+  box-sizing: border-box;
 }
 
 .id-container,
-.name-container {
+.name-container,
+.like-container,
+.message-container {
+  font-size: 16px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-top: 2.5px;
+}
+
+.id-container,
+.name-container,
+.like-container {
   font-weight: bold;
+  text-align: center;
+}
+
+.name-container,
+.message-container {
+  height: auto;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
 }
 
 .id-container {
-  padding-left: 5px;
-  width: 3%;
+  width: auto;
 }
+
 .name-container {
-  font-weight: bold;
-  width: 10%;
+  width: auto;
+  height: auto;
+  max-height: 10%;
+  overflow-wrap: break-word;
 }
 
 .message-container {
-  padding: 2px;
-  width: auto;
-  height: auto;
+  width: 100%;
+}
+
+.like-div {
+  display: flex;
+  height: 32px;
+  max-height: auto;
+
+  width: 32px;
+  max-width: 30px;
+}
+
+.like-container {
+  color: black;
+  pointer-events: none;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  transform: translateX(-12.5%);
+}
+
+.like-btn {
+  margin-right: 5px;
+  width: 36px;
+  height: 36px;
+}
+
+.del-btn {
+  width: 32px;
+  height: 32px;
 }
