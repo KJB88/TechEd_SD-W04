@@ -6,18 +6,18 @@
 import express from "express";
 import cors from "cors";
 
-// Get Routing
+// GET Routing
 import { allMessages } from "./assets/js/getHandler.js";
 import { random } from "./assets/js/getHandler.js";
 import { root } from "./assets/js/getHandler.js";
 
-// Post Routing
+// POST Routing
 import { addNewMessage } from "./assets/js/postHandler.js";
 
-// Del Routing
+// DEL Routing
 import { deleteMessage } from "./assets/js/delHandler.js";
 
-// Put Routing
+// PUT Routing
 import { putLike } from "./assets/js/putHandler.js";
 
 // #endregion IMPORTS

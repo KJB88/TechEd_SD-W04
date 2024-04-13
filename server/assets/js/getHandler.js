@@ -1,12 +1,8 @@
 /* GET ROUTE HANDLING */
 /* -------------------- */
-// #region IMPORT ACCESSORS
 import { getAllMessages } from "./dbHandler.js";
 
-// #endregion IMPORT ACCESSORS
-/* -------------------- */
-// #region GET ROUTING
-
+/* GET root handling */
 export function root() {
   return "Stop hitting root!";
 }
@@ -19,6 +15,4 @@ export function random() {
 export function allMessages() {
   return getAllMessages();
 }
-
-// #endregion GET ROUTING
 /* -------------------- */

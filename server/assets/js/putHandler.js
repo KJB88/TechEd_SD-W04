@@ -1,15 +1,9 @@
 /* PUT ROUTE HANDLING */
 /* -------------------- */
-// #region IMPORT ACCESSORS
-
 import { incrementLikeCount } from "./dbHandler.js";
 
-// #endregion IMPORT ACCESSORS
-/* -------------------- */
-// #region PUT ROUTING
-
+/* Add a like to a message from the DB by the given id */
 export function putLike(requestBody) {
   return incrementLikeCount(requestBody.id);
 }
-// #endregion PUT ROUTING
 /* -------------------- */

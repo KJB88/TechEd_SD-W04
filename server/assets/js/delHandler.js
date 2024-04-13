@@ -1,15 +1,9 @@
 /* DEL ROUTE HANDLING */
 /* -------------------- */
-// #region IMPORT ACCESSORS
-
 import { removeMessage } from "./dbHandler.js";
 
-// #endregion IMPORT ACCESSORS
-/* -------------------- */
-// #region DEL ROUTING
-
+/* Delete a message from the DB by the given id */
 export function deleteMessage(requestBody) {
   return removeMessage(requestBody.id);
 }
-// #endregion DEL ROUTING
 /* -------------------- */

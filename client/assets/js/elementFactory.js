@@ -1,10 +1,16 @@
 /* ELEMENT BUILDER */
 /* -------------------- */
+// #region IMPORTS
+
 import { deleteMessage } from "./networkHandler.js";
 import { putLike } from "./networkHandler.js";
 
 import { onDeleteCallback } from "../../app.js";
 import { onPutCallback } from "../../app.js";
+
+// #endregion IMPORTS
+/* -------------------- */
+// #region VARS
 
 const messageLog = document.getElementById("message-log");
 const arrowUpImg = "./assets/img/arrowUp.png";
@@ -12,11 +18,16 @@ const crossImg = "./assets/img/cross.png";
 
 const entryTracking = [];
 
+// #endregion VARS
+/* -------------------- */
+// #region CORE
+
+/* Clear all existing messages from the client */
 export function clearEntries() {
   for (let i = 0; i < entryTracking.length; i++) entryTracking[i].remove();
   entryTracking.length = 0;
 }
-
+/* Build a new message log from the given data */
 export function buildMessage(entries) {
   for (let i = 0; i < entries.length; i++) {
     const entryContainer = document.createElement("div"); // Parent container
@@ -42,6 +53,11 @@ export function buildMessage(entries) {
   }
 }
 
+// #endregion CORE
+/* -------------------- */
+// #region BUILDERS
+
+/* Build the ID */
 function buildID(entry) {
   const idContainer = document.createElement("span"); // ID
   idContainer.classList.add("drop-shadow-2px", "id-container");
@@ -66,7 +82,6 @@ function buildLike(entry) {
   const likeBtn = document.createElement("img");
   likeBtn.classList.add("like-btn");
   likeBtn.src = arrowUpImg;
-
   likeBtn.addEventListener("click", () => {
     putLike(entry.id, onPutCallback);
   });
@@ -94,6 +109,7 @@ function buildMessageBody(entry) {
   return messageContainer;
 }
 
+/* Build the delete button */
 function buildDeleteBtn(entry) {
   const delBtn = document.createElement("img");
   delBtn.classList.add("del-btn");
@@ -104,3 +120,5 @@ function buildDeleteBtn(entry) {
   });
   return delBtn;
 }
+// #endregion BUILDERS
+/* -------------------- */
