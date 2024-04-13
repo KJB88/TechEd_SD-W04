@@ -9,12 +9,12 @@
 <p>
   Repository for coursework for TechEd Software Development Bootcamp - Week 04.
 </p>
+</div>
   <ul>
     <li><b>Static Site (Client):</b> <a href="https://teched-sd-w04-client.onrender.com"/></li>
     <li><b>Web Service (Server):</b> <a href="https://teched-sd-w04.onrender.com"/></li>
   </ul>
-</div>
-<section>
+      <section>
 <h2>Project Outline</h2>
 <p>Develop a front-end page for a Guest Book and a persistent back-end to handle POST requests and populate the website with user content. The front-end must be usable on different devices (mobile responsive) and have implementation to handle common accessibility concerns.</p>
   <p><b>All requirements and stretch goals are being worked on.</b></p>
