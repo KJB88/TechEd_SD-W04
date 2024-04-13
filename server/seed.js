@@ -3,7 +3,7 @@ export const db = new Database("./guestbook.db");
 
 // DEBUG
 /* Purge previous table */
-db.exec("DROP TABLE messages");
+db.exec("DROP TABLE IF EXISTS messages");
 
 /* Create Tables */
 db.exec(`
@@ -16,7 +16,11 @@ CREATE TABLE IF NOT EXISTS messages (
 `);
 
 /* Populate Tables */
-db.prepare(
+const seedInsert = db.prepare(
   `INSERT INTO messages (author, message) VALUES 
   (?, ?)`
-).run("Kev", "This is a message.");
+);
+
+seedInsert.run("Kev", "This is a message.");
+seedInsert.run("Kev", "There's no one here besides me!");
+seedInsert.run("MannyLuvr69", "wat a nerd lol");

@@ -17,6 +17,9 @@ import { addNewMessage } from "./assets/js/postHandler.js";
 // Del Routing
 import { deleteMessage } from "./assets/js/delHandler.js";
 
+// Put Routing
+import { putLike } from "./assets/js/putHandler.js";
+
 // #endregion IMPORTS
 /* -------------------- */
 // #region CONFIG
@@ -48,7 +51,7 @@ app.get("/random", (request, response) => {
 });
 
 /* Get messages */
-app.get("/messages", (request, response) => {
+app.get("/message", (request, response) => {
   console.log(`GET: ${request.body}`);
   response.json(allMessages());
 });
@@ -59,8 +62,7 @@ app.get("/messages", (request, response) => {
 
 app.post("/message", (request, response) => {
   console.log(`POST: ${request.body}`);
-  addNewMessage(request.body);
-  response.send();
+  response.json(addNewMessage(request.body));
 });
 
 // #endregion POST ROUTING
@@ -69,17 +71,16 @@ app.post("/message", (request, response) => {
 
 app.delete("/message", (request, response) => {
   console.log(`DEL: ${request.body}`);
-  deleteMessage(request.body);
-  // TODO: DEL STUFF
+  response.json(deleteMessage(request.body));
 });
 
 // #endregion DEL ROUTING
 /* -------------------- */
 // #region PUT ROUTING
 
-app.put("/message", (request, response) => {
+app.put("/like", (request, response) => {
   console.log(`PUT: ${request.body}`);
-  // TODO: PUT STUFF
+  response.json(putLike(request.body));
 });
 
 // #endregion PUT ROUTING

@@ -18,14 +18,17 @@ export function getAllMessages() {
 
 /* Add a message to the DB. */
 export function postMessage(author, message) {
-  insertMessage.run(author, message);
+  return insertMessage.run(author, message);
 }
 
 /* Remove a message from the DB, specified by id */
 export function removeMessage(id) {
-  deleteMessage.run(id);
+  return deleteMessage.run(id);
 }
 
+export function incrementLikeCount(id) {
+  return updateMessageLikes.run(id);
+}
 // #endregion DB HANDLING
 /* -------------------- */
 // #region QUERIES
@@ -39,6 +42,9 @@ const selectAllMessages = db.prepare("SELECT * FROM messages");
 
 const deleteMessage = db.prepare(`DELETE FROM messages WHERE id = ?`);
 
-const updateMessageLikes = db.prepare(`UPDATE messages SET likes = likes + 1`);
+const updateMessageLikes = db.prepare(
+  `UPDATE messages SET likes = likes + 1
+  WHERE id = ?`
+);
 // #endregion QUERIES
 /* -------------------- */

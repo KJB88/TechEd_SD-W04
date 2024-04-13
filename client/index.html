@@ -17,7 +17,10 @@
 
     <!-- JS -->
     <script src="./assets/js/helper.js" type="module" defer></script>
+    <script src="./assets/js/wordlibs.js" type="module" defer></script>
     <script src="./assets/js/bouncingRainbowText.js" type="module" defer></script>
+    <script src="./assets/js/elementFactory.js" type="module" defer></script>
+    <script src="./assets/js/networkHandler.js" type="module" defer></script>
     <script src="./app.js" type="module" defer></script>
 
     <title>Everything about Tim: Totally Original Guestbook!</title>
@@ -27,11 +30,9 @@
     <!-- HEADER -->
     <header>
         <nav>
+            <h1 class="no-pointer-events drop-shadow-2px">Everything about Tim</h1>
+            <h2 class="no-pointer-events subtitle drop-shadow-2px">Totally Original Guestbook</h2>
             <ul>
-                <li class="drop-shadow-2px">
-                    <h1 class="no-pointer-events">Everything about Tim</h1>
-                    <h2 class="no-pointer-events subtitle">Totally Original Guestbook</h2>
-                </li>
                 <li>
                     <a href="https://github.com/KJB88/TechEd_SD-W04" class="drop-shadow-2px">Repo</a>
                 </li>
@@ -47,11 +48,30 @@
             </ul>
         </nav>
     </header>
-
     <!-- MAIN -->
     <main>
-        <form>
-        </form>
+        <div id="info-panel">
+            <p>Welcome to 'Everything about Tim'! The Totally Original Guestbook™ (Do not steal!!1!). The fictional fan
+                club for the best teacher that ever was, is and will be. Hang around and drop us a message to tell us
+                how much you love his shiny bald head and his magnificent coding beard.</p>
+        </div>
+        <div id="content-panel">
+            <!-- Input Form -->
+            <section aria-label="The input form to post messages to the guestbook.">
+                <form id="input-form" class="drop-shadow-2px">
+                    <label for="name-input" class="drop-shadow-2px form-label">Name</label>
+                    <input id="name-input" class="drop-shadow-2px" type="text" label="Name:"
+                        placeholder="Type your name in here!" />
+                    <label for="message-input" class="drop-shadow-2px form-label">Message</label>
+                    <textarea id="message-input" class="drop-shadow-2px" rows="4" cols="20"
+                        placeholder="Type your message here!"></textarea>
+                    <button id="submit-btn" class="drop-shadow-2px">Post your Message</button>
+                </form>
+            </section>
+            <!-- Message Log -->
+            <section aria-label="The contents of the guestbook." id="message-log">
+            </section>
+        </div>
     </main>
 
     <!-- FOOTER -->

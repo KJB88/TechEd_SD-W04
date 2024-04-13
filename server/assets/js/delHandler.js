@@ -8,8 +8,8 @@ import { removeMessage } from "./dbHandler.js";
 /* -------------------- */
 // #region DEL ROUTING
 
-export function deleteMessage(request) {
-  removeMessage(1);
+export function deleteMessage(requestBody) {
+  return removeMessage(requestBody.id);
 }
 // #endregion DEL ROUTING
 /* -------------------- */

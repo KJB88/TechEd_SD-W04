@@ -2,4 +2,95 @@
 
 body {
   background-color: var(--rgba-pink-translucent);
+
+  background-size: 200px 200px;
+  background-image: url("../img/tim_the_lad.jpg");
+  background-repeat: repeat;
+  background-position: top left;
+}
+
+#content-panel {
+  z-index: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 66%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+  margin-top: 17.5vh;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-bottom: 2px solid black;
+  background-color: var(--rgba-pink-translucent);
+}
+
+/* New Message Form */
+#input-form {
+  display: flex;
+  flex-flow: column nowrap;
+
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+#name-input,
+#message-input {
+  font-family: sans-serif;
+  width: 95%;
+  border: 2.5px black solid;
+}
+#name-input {
+  height: 20px;
+}
+
+.form-label {
+  margin-top: 2.5px;
+  font-weight: bold;
+}
+
+#submit-btn {
+  border: 2.5px black solid;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 95%;
+  height: 25px;
+}
+
+/* Message Log */
+#message-log {
+  display: flex;
+  flex-flow: column wrap;
+  border-top: 3px black solid;
+}
+
+.entry-container {
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: 3px black solid;
+  align-items: center;
+}
+
+.id-container,
+.name-container {
+  font-weight: bold;
+}
+
+.id-container {
+  padding-left: 5px;
+  width: 3%;
+}
+.name-container {
+  font-weight: bold;
+  width: 10%;
+}
+
+.message-container {
+  padding: 2px;
+  width: auto;
+  height: auto;
 }
