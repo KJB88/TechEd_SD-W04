@@ -4,7 +4,7 @@ body {
   background-color: var(--rgba-pink-translucent);
 
   background-size: 200px 200px;
-  background-image: url("/client/public/tim_the_lad.jpg");
+  background-image: url("/tim_the_lad.jpg");
   background-repeat: repeat;
   background-position: top left;
 }

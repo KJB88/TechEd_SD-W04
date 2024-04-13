@@ -13,8 +13,8 @@ import { onPutCallback } from "../../app.js";
 // #region VARS
 
 const messageLog = document.getElementById("message-log");
-const arrowUpImg = "./arrowUp.png";
-const crossImg = "./cross.png";
+const arrowUpImg = "/arrowUp.png";
+const crossImg = "/cross.png";
 
 const entryTracking = [];
 
