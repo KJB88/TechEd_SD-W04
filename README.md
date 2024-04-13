@@ -7,8 +7,12 @@
     <a href="https://github.com/KJB88">Github</a>
   </p>
 <p>
-  Repository for coursework for TechEd Software Development Bootcamp - Week 04
+  Repository for coursework for TechEd Software Development Bootcamp - Week 04.
 </p>
+  <ul>
+    <li><b>Static Site (Client):</b> <a href="https://teched-sd-w04-client.onrender.com"/></li>
+    <li><b>Web Service (Server):</b> <a href="https://teched-sd-w04.onrender.com"/></li>
+  </ul>
 </div>
 <section>
 <h2>Project Outline</h2>
