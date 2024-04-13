@@ -56,11 +56,24 @@
 <section>
 <h2>Project Structure</h2>
   <h3>Client</h3>
-    <p>TODO</p>
+  <ul>
+    <li>HTML: Index.html is in the /client folder.</li>
+    <li>CSS: CSS files are in client/assets/css folder.</li>
+    <li>JS: JS files are in the client/assets/js folder. This excludes app.js which sits in /client.</li>
+  </ul>
   <h3>Server</h3>
-    <p>TODO</p>
+  <ul>
+    <li>JS: JS files are in the server/assets/js folder. This excludes server.js and seed.js which sit in /server.</li>
+  </ul>
   <h3>Database</h3>
-    <p>TODO</p>
+  <ul>
+    <li>JS: dbHandler.js and seed.js contain database access, mutation and seeding.</li>
+    <li>DB: guestbook.db can be found in /server.</li>
+  </ul>
+  <h3>Other</h3>
+  <ul>
+    <li>IMGs: Image files for the client are found in /public due to the requirements of vite builds.</li>
+  </ul>
 </section>
 <section>
 <h2>Implementation (of Requirements)</h2>
