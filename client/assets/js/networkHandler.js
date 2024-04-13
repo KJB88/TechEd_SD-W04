@@ -1,7 +1,8 @@
 /* NETWORK HANDLING*/
 /* -------------------- */
 // #region VARS
-const apiURL = "https://teched-sd-w04.onrender.com/";
+const apiURL = "https://teched-sd-w04.onrender.com";
+
 //const apiURL = "http://127.0.0.1:8080";
 
 // #endregion VARS
