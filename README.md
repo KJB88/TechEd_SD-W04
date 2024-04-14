@@ -11,7 +11,7 @@
 </p>
 </div>
 <section>
-  <h2>Project Outline</h2>
+  <h2>📋 Project Outline</h2>
   <p>Develop a front-end page for a Guest Book and a persistent back-end to handle POST requests and populate the website with user content. The front-end must be usable on different devices (mobile responsive) and have implementation to handle common accessibility concerns.</p>
   <ul>
     <li><b>Static Site (Client):</b> <a href="https://teched-sd-w04-client.onrender.com"/>https://teched-sd-w04-client.onrender.com</li>
@@ -20,7 +20,7 @@
   <p><b>All requirements and stretch goals are complete. No specific difficulties.</b></p>
 </section>
 <section>
-  <h2>User Stories</h2>
+  <h2>🙍User Stories</h2>
   <h3>As a User...</h3>
   <ul>
     <li>I want to visit the website and read information on my phone or computer.</li>
@@ -29,7 +29,7 @@
   </ul>
 </section>
 <section>
-<h2>Requirements</h2>
+<h2>👷 Requirements</h2>
 <ul>
 <li><b>'90s Kid</b>: Have a mobile-responsive, accessible and functional website for users to view messages in the Guest Book.</li>
   <ul>
@@ -47,14 +47,14 @@
 </ul>
 </section>
 <section>
-<h2>Stretch Goals</h2>
+<h2>🥅 Stretch Goals</h2>
 <ul>
 <li><b>Damage Control</b>: Give the user the option to <b>delete</b> a message, preferably their own!</li>
 <li><b>Dopamine Hit</b>: Allow the user to <b>like</b> a message, which will increment a <b>like counter</b> on the message.</li>
 </ul>
 </section>
 <section>
-<h2>Project Structure</h2>
+<h2>📈 Project Structure</h2>
   <h3>Client</h3>
   <ul>
     <li><b>HTML</b>: Index.html is in the /client folder.</li>
@@ -76,7 +76,7 @@
   </ul>
 </section>
 <section>
-<h2>Implementation (of Requirements)</h2>
+<h2>✔️ Implementation (of Requirements)</h2>
   <h3>90's Fan Page (Client)</h3>
   <h4>Accessible Insanity for All</h4>
   <p>While the webpage may make you question your sanity, it definitely won't make you question it's responsivity and accessibility. Verified with no accessibility problems via WAVE. Responsive design that collapses for handheld screens and stretches for larger screens. My CSS files are organised into targeted areas and reusables (header, main, footer, core, common). Index.html uses comments and appropriate structural blocks (section, div, etc) that contain aria-labels.</p>
@@ -91,7 +91,7 @@
   <p>Well, you did it. You made me have a conversation with myself to seed the database. I hope you're happy. The server can handle GET routing to grab all messages in the DB and send them back to the client, where the response is processed appropriately and the message log front-end is populated with the new data.</p>
 </section>
 <section>
-  <h2>Implementation (of Stretch Goals)</h2>
+  <h2>➕ Implementation (of Stretch Goals)</h2>
   <h3>If only it was this easy to delete other people's posts</h3>
   <p>They say anything you put on the Internet, stays on the Internet. Users can now delete a message. The DELETE request will be sent with a payload of the id of the message. The server will DELETE route these through to the database handler which will remove the message record with that id.
   </p>
@@ -100,7 +100,7 @@
   </p>
 </section>
 <section>
-  <h2>Honorary Mentions</h2>
+  <h2>🏆 Honorary Mentions</h2>
   <h3>Layers. Software has LAYERS, Donkey!</h3>
   <p>I like when my codebase is nice and clean. So I separated my logic into responsibilty .js files. Each have names that give an idea as to their purpose. getHandler.js, postHandler.js, dbHandler.js. It's not very creative, but it works!</p>
   <h3>A bit of Boing</h3>
