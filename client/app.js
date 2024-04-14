@@ -36,7 +36,6 @@ inputForm.addEventListener("submit", (e) => {
   e.preventDefault();
   e.stopImmediatePropagation(); // Consume event
   readFormData(e);
-  console.log("SUBMIT");
 });
 
 // #endregion HOOKS

@@ -21,6 +21,9 @@ const seedInsert = db.prepare(
   (?, ?)`
 );
 
-seedInsert.run("Kev", "This is a message.");
-seedInsert.run("Kev", "There's no one here besides me!");
-seedInsert.run("MannyLuvr69", "wat a nerd lol");
+seedInsert.run("Kev", "Welcome to my guestbook!");
+seedInsert.run("Kev", "It's just me here for now!");
+seedInsert.run("MannyLuvr69", "Manny is teh best!!1!");
+seedInsert.run("Definitely-Frankie", "Kev is the best!!.");
+seedInsert.run("TSmith", "You'll be hearing from my lawyers.");
+seedInsert.run("Kev", "I'm still waiting for my McFlurry, Tim.");

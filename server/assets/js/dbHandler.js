@@ -12,44 +12,45 @@ const db = new Database("./guestbook.db");
 
 /* Get all messages in the DB */
 export function getAllMessages() {
-  return selectAllMessages.all();
+  return selectAllMessagesQuery.all();
 }
 
 /* Add a message to the DB. */
-export function postMessage(name, message) {
-  insertMessage.run(name, message);
-  return selectAllMessages.all();
+export function insertNewMessage(name, message) {
+  insertMessageQuery.run(name, message);
+  return selectAllMessagesQuery.all();
 }
 
 /* Remove a message from the DB, specified by id */
-export function removeMessage(id) {
-  deleteMessage.run(id);
-  return selectAllMessages.all();
+export function deleteMessage(id) {
+  deleteMessageQuery.run(id);
+  return selectAllMessagesQuery.all();
 }
 
 /* Add a like to a message record, specified by id */
-export function incrementLikeCount(id) {
-  updateMessageLikes.run(id);
-  return selectAllMessages.all();
+export function updateLikeCount(id) {
+  updateMessageLikesQuery.run(id);
+  return selectAllMessagesQuery.all();
 }
+
 // #endregion DB HANDLING
 /* -------------------- */
 // #region QUERIES
 
 // Insert a message
-const insertMessage = db.prepare(
+const insertMessageQuery = db.prepare(
   `INSERT INTO messages (name, message) VALUES
       (?, ?)`
 );
 
 // Select all messages
-const selectAllMessages = db.prepare("SELECT * FROM messages");
+const selectAllMessagesQuery = db.prepare("SELECT * FROM messages");
 
 // Delete a message by ID
-const deleteMessage = db.prepare(`DELETE FROM messages WHERE id = ?`);
+const deleteMessageQuery = db.prepare(`DELETE FROM messages WHERE id = ?`);
 
 // Update the like count on a message by ID
-const updateMessageLikes = db.prepare(
+const updateMessageLikesQuery = db.prepare(
   `UPDATE messages SET likes = likes + 1
   WHERE id = ?`
 );

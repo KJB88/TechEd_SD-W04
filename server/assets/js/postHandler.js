@@ -1,9 +1,9 @@
 /* POST ROUTE HANDLING */
 /* -------------------- */
-import { postMessage } from "./dbHandler.js";
+import { insertNewMessage } from "./dbHandler.js";
 
 /* Add a new message to the guest book DB. */
-export function addNewMessage(requestBody) {
-  return postMessage(requestBody.name, requestBody.message);
+export function postNewMessageRequest(requestBody) {
+  return insertNewMessage(requestBody.name, requestBody.message);
 }
 /* -------------------- */

@@ -1,8 +1,8 @@
 /* NETWORK HANDLING*/
 /* -------------------- */
 // #region VARS
-const apiURL = "https://teched-sd-w04.onrender.com";
 
+const apiURL = "https://teched-sd-w04.onrender.com";
 //const apiURL = "http://127.0.0.1:8080";
 
 // #endregion VARS
@@ -21,13 +21,12 @@ export async function getMessages(
     },
   });
 
-  if (resp.status == resp.ok) {
+  if (resp.ok) {
     const data = await resp.json();
     console.log("GET response received.");
     successCallback(data);
   } else {
-    console.log(`GET request failed: ${resp.status}`);
-    failureCallback(resp.status);
+    failureCallback("GET", resp.status);
   }
 }
 
@@ -45,13 +44,12 @@ export async function postMessage(
     },
   });
 
-  if (resp.status == resp.ok) {
+  if (resp.ok) {
     const data = await resp.json();
     console.log("POST response received.");
     successCallback(data);
   } else {
-    console.log(`POST request failed: ${resp.status}`);
-    failureCallback(resp.status);
+    failureCallback("POST", resp.status);
   }
 }
 
@@ -69,13 +67,12 @@ export async function deleteMessage(
     },
   });
 
-  if (resp.status == resp.ok) {
+  if (resp.ok) {
     const data = await resp.json();
     console.log("DEL response received.");
     successCallback(data);
   } else {
-    console.log(`DEL request failed: ${resp.status}`);
-    failureCallback(resp.status);
+    failureCallback("DEL", resp.status);
   }
 }
 
@@ -93,17 +90,17 @@ export async function putLike(
     },
   });
 
-  if (resp.status == resp.ok) {
+  if (resp.ok) {
     const data = await resp.json();
     console.log("PUT response received.");
     successCallback(data);
   } else {
-    failureCallback(resp.status);
+    failureCallback("PUT", resp.status);
   }
 }
 
-function onFailureCallback(status) {
-  console.log(`PUT request failed: ${status}`);
+function onFailureCallback(requestType, status) {
+  console.log(`${requestType} request failed: ${status}`);
 }
 // #endregion REQUESTS
 /* -------------------- */

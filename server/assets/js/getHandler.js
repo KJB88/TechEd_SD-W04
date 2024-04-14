@@ -3,16 +3,16 @@
 import { getAllMessages } from "./dbHandler.js";
 
 /* GET root handling */
-export function root() {
+export function rootRequest() {
   return "Stop hitting root!";
 }
 /* Get a random number! Ye olde test method! */
-export function random() {
+export function getRandomRequest() {
   return Math.random();
 }
 
 /* Get all messages and stuff them in the response */
-export function allMessages() {
+export function getAllMessagesRequest() {
   return getAllMessages();
 }
 /* -------------------- */

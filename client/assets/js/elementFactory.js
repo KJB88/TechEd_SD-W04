@@ -2,11 +2,9 @@
 /* -------------------- */
 // #region IMPORTS
 
-import { deleteMessage } from "./networkHandler.js";
-import { putLike } from "./networkHandler.js";
+import { deleteMessage, putLike } from "./networkHandler.js";
 
-import { onDeleteCallback } from "../../app.js";
-import { onPutCallback } from "../../app.js";
+import { onDeleteCallback, onPutCallback } from "../../app.js";
 
 // #endregion IMPORTS
 /* -------------------- */
@@ -82,7 +80,7 @@ function buildLike(entry) {
   const likeBtn = document.createElement("img");
   likeBtn.classList.add("like-btn");
   likeBtn.src = arrowUpImg;
-  likeBtn.addEventListener("click", () => {
+  likeBtn.addEventListener("click", (e) => {
     putLike(entry.id, onPutCallback);
   });
 
@@ -115,7 +113,7 @@ function buildDeleteBtn(entry) {
   delBtn.classList.add("del-btn");
   delBtn.src = crossImg;
 
-  delBtn.addEventListener("click", () => {
+  delBtn.addEventListener("click", (e) => {
     deleteMessage(entry.id, onDeleteCallback);
   });
   return delBtn;

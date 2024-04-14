@@ -7,18 +7,18 @@ import express from "express";
 import cors from "cors";
 
 // GET Routing
-import { allMessages } from "./assets/js/getHandler.js";
-import { random } from "./assets/js/getHandler.js";
-import { root } from "./assets/js/getHandler.js";
+import { getAllMessagesRequest } from "./assets/js/getHandler.js";
+import { getRandomRequest } from "./assets/js/getHandler.js";
+import { rootRequest } from "./assets/js/getHandler.js";
 
 // POST Routing
-import { addNewMessage } from "./assets/js/postHandler.js";
+import { postNewMessageRequest } from "./assets/js/postHandler.js";
 
 // DEL Routing
-import { deleteMessage } from "./assets/js/delHandler.js";
+import { deleteRequest } from "./assets/js/delHandler.js";
 
 // PUT Routing
-import { putLike } from "./assets/js/putHandler.js";
+import { putLikeRequest } from "./assets/js/putHandler.js";
 
 // #endregion IMPORTS
 /* -------------------- */
@@ -41,19 +41,19 @@ app.listen(8080, function () {
 /* Root */
 app.get("/", function (request, response) {
   console.log(`GET: ${request.body}`);
-  response.json(root());
+  response.json(rootRequest());
 });
 
 /* (TEST) Get random number */
 app.get("/random", (request, response) => {
   console.log(`GET: ${request.body}`);
-  response.json(random());
+  response.json(getRandomRequest());
 });
 
 /* Get messages */
 app.get("/message", (request, response) => {
   console.log(`GET: ${request.body}`);
-  response.json(allMessages());
+  response.json(getAllMessagesRequest());
 });
 
 // #endregion GET ROUTING
@@ -62,7 +62,7 @@ app.get("/message", (request, response) => {
 
 app.post("/message", (request, response) => {
   console.log(`POST: ${request.body}`);
-  response.json(addNewMessage(request.body));
+  response.json(postNewMessageRequest(request.body));
 });
 
 // #endregion POST ROUTING
@@ -71,7 +71,7 @@ app.post("/message", (request, response) => {
 
 app.delete("/message", (request, response) => {
   console.log(`DEL: ${request.body}`);
-  response.json(deleteMessage(request.body));
+  response.json(deleteRequest(request.body));
 });
 
 // #endregion DEL ROUTING
@@ -80,7 +80,7 @@ app.delete("/message", (request, response) => {
 
 app.put("/like", (request, response) => {
   console.log(`PUT: ${request.body}`);
-  response.json(putLike(request.body));
+  response.json(putLikeRequest(request.body));
 });
 
 // #endregion PUT ROUTING
