@@ -1,5 +1,41 @@
 @import "common.css";
 
+/* Teeny tiny screen*/
+@media (max-width: 400px) {
+  #content-panel {
+    width: 100%;
+    min-width: 275px;
+    height: 100%;
+
+    margin: 0;
+    padding-top: 2vh;
+
+    transition: cubic-bezier(0.075, 0.82, 0, 1);
+    transition-duration: 1s;
+  }
+
+  .info-panel {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+/* Big ol' screen*/
+@media (min-width: 401px) {
+  #content-panel {
+    width: 90%;
+    min-width: 400px;
+    max-width: 800px;
+    height: auto;
+
+    margin: 0;
+    margin-top: 17.5vh;
+
+    transition: cubic-bezier(0.075, 0, 0, 1);
+    transition-duration: 1s;
+  }
+}
+
 body {
   background-color: var(--rgba-pink-translucent);
 
@@ -11,27 +47,30 @@ body {
 
 /* The glue that holds my messaging madness together */
 #content-panel {
+  position: fixed;
+
+  left: 50%;
+
+  transform: translateX(-50%);
   z-index: 2;
+
   display: flex;
   flex-flow: column nowrap;
-  width: 75%;
-  height: auto;
-
-  margin-top: 17.5vh;
-  margin-left: auto;
-  margin-right: auto;
 
   border-top: 5px solid black;
   border-left: 5px solid black;
   border-right: 5px solid black;
   border-bottom: 2px solid black;
   box-sizing: border-box;
+
   background-color: var(--rgba-pink-translucent);
 }
 
 .info-panel {
-  width: 95%;
-  height: max-content;
+  width: auto;
+  height: auto;
+  min-height: 50px;
+  max-height: 100px;
 
   margin-top: 5px;
   margin-left: 20px;
@@ -52,7 +91,6 @@ body {
 
   align-items: center;
   margin-bottom: 5px;
-  border-top: 2.5px black solid;
   box-sizing: border-box;
 }
 
@@ -69,7 +107,7 @@ body {
 }
 
 #message-input {
-  width: 75%;
+  width: 275px;
 }
 
 .form-label {
@@ -82,7 +120,7 @@ body {
   box-sizing: border-box;
   margin-top: 5px;
   margin-bottom: 5px;
-  width: 25%;
+  width: 100px;
   height: 25px;
 }
 
@@ -90,7 +128,6 @@ body {
 #message-log {
   display: flex;
   flex-flow: column wrap;
-  border-top: 3px black solid;
   box-sizing: border-box;
 }
 

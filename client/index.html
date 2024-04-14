@@ -28,26 +28,32 @@
 </head>
 
 <body>
+
     <!-- HEADER -->
     <header>
-        <nav>
-            <h1 class="no-pointer-events drop-shadow-2px">Everything about Tim</h1>
-            <h2 class="no-pointer-events subtitle drop-shadow-2px">Totally Original Guestbook</h2>
-            <ul>
-                <li>
-                    <a href="https://github.com/KJB88/TechEd_SD-W04" class="drop-shadow-2px">Repo</a>
-                </li>
-                <li>
-                    <a href="https://github.com/KJB88" class="drop-shadow-2px">Github</a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/kevin-barr1988/" class="drop-shadow-2px">LinkedIn</a>
-                </li>
-                <li>
-                    <a href="https://kjb88.github.io/" class="drop-shadow-2px">Website</a>
-                </li>
-            </ul>
-        </nav>
+        <button id="collapse-btn">^</button>
+        <div id="header-div">
+            <nav>
+                <div class="title-div">
+                    <h1 class="no-pointer-events drop-shadow-2px">Everything about Tim</h1>
+                    <h2 class="no-pointer-events subtitle drop-shadow-2px">Totally Original Guestbook</h2>
+                </div>
+                <ul>
+                    <li>
+                        <a href="https://github.com/KJB88/TechEd_SD-W04" class="drop-shadow-2px">Repo</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/KJB88" class="drop-shadow-2px">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/kevin-barr1988/" class="drop-shadow-2px">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="https://kjb88.github.io/" class="drop-shadow-2px">Website</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- MAIN -->
@@ -59,11 +65,7 @@
             <section class="info-panel"
                 aria-label="A description of the site's use case. One man's obsession for another.">
                 <article class="drop-shadow-2px">
-                    Welcome to 'Everything about Tim'! The Totally Original Guestbook™ (Do not steal!!1!one!)!
-                </article>
-                <article class="drop-shadow-2px">
-                    The fictional fan club for the teacher with awful(ly good!) jokes and a penchant for forgetting
-                    what he's doing.
+                    Welcome to 'Everything about Tim'! <br>The Totally Original Guestbook™ <br>(Do not steal!!1!one!)!
                 </article>
             </section>
 
@@ -76,7 +78,7 @@
                     <label for="message-input" class="drop-shadow-2px form-label no-pointer-events">Message</label>
                     <textarea name="message" id="message-input" class="drop-shadow-2px" rows="4" cols="20"
                         placeholder="Type your message here!"></textarea>
-                    <button id="submit-btn" class="drop-shadow-2px">Post your Message</button>
+                    <button id="submit-btn" class="drop-shadow-2px">Post</button>
                 </form>
             </section>
 

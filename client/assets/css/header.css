@@ -1,13 +1,63 @@
 @import "common.css";
 
-/* HEADER */
-header {
+/* Teeny tiny screen*/
+@media (max-width: 400px) {
+  #header-div {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  nav ul {
+    gap: 0.25rem;
+  }
+
+  #collapse-btn {
+    width: 100%;
+    min-width: 50px;
+    max-width: 200px;
+  }
+}
+
+/* Big ol' screen*/
+@media (min-width: 401px) {
+  #header-div {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+
+  #collapse-btn {
+    width: 200px;
+  }
+}
+
+/* Collapse button*/
+#collapse-btn {
+  z-index: 10;
   position: fixed;
-  width: auto;
-  height: auto;
-  background-color: rgba(150, 0, 150, 0.65);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+
+  height: 18px;
+
+  color: white;
+  background-color: black;
+
+  border: black 2px solid;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
+}
+
+/* HEADER */
+#header-div {
+  position: fixed;
+  background-color: rgba(150, 0, 150, 0.65);
   border-left: 5px solid black;
   border-bottom: 5px solid black;
   border-right: 5px solid black;
@@ -17,6 +67,9 @@ header {
   padding-left: 20px;
   padding-right: 20px;
   transform: translateX(-50%);
+
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 /* Nav */
@@ -24,40 +77,48 @@ nav {
   font-weight: bold;
   padding-top: 2.5px;
   height: 100px;
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-
   align-content: center;
 }
 
-header h1 {
+.title-div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+#header-div h1 {
+  height: 50px;
+  width: 250px;
   text-align: center;
-  width: auto;
   margin: 0;
-  margin-bottom: -10px;
+  margin-bottom: -15px;
+  white-space: nowrap;
 }
 
 /* Totally Original Gallery! */
-header .subtitle {
+#header-div .subtitle {
   text-align: center;
-  width: auto;
-  padding: 0;
+  white-space: nowrap;
+  width: 250px;
+  height: 30px;
   margin: 0;
+  margin-top: -7.5px;
   font-size: 16px;
-  top: 4.5%;
 }
 
 nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   width: 100%;
   padding-left: var(--grid-gappage);
-
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
 }
 
 nav ul li {
