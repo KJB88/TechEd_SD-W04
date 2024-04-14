@@ -27,8 +27,8 @@ const smallScreen = window.matchMedia("(max-width: 400px)");
 window.onload = () => {
   smallScreen.addEventListener("change", () => {
     autoCollapse();
-    contentSlide();
   });
+
   clearEntries();
   getMessages(buildMessage);
 
@@ -92,6 +92,7 @@ function headerSlide() {
     headerDiv.style.setProperty("top", "-150px");
     isCollapsed = true;
     collapseBtn.innerText = "v";
+    collapseBtn.ariaLabel = "Uncollapse the header";
     return;
   }
 
@@ -106,20 +107,9 @@ function headerSlide() {
   headerDiv.style.setProperty("top", "0px");
   isCollapsed = false;
   collapseBtn.innerText = "^";
+  collapseBtn.ariaLabel = "Collapse the header.";
 }
 
-function contentSlide() {
-  /*
-  if (smallScreen.matches) {
-    contentPanel.animate(
-      {
-        top: ["0px", "25px", "50px", "75px", "100px"],
-      },
-      { duration: 1000, easing: "ease-out", iterations: 1 }
-    );
-  }
-  */
-}
 function autoCollapse() {
   if (smallScreen.matches) {
     if (!isCollapsed) headerSlide(); // Collapsin' time!

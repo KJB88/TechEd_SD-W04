@@ -31,25 +31,29 @@
 
     <!-- HEADER -->
     <header>
-        <button id="collapse-btn">^</button>
-        <div id="header-div">
+        <button id="collapse-btn" aria-label="Collapse the header.">^</button>
+        <div id="header-div" aria-label="The header of the webpage.">
             <nav>
-                <div class="title-div">
+                <div class="title-div" aria-label="The title and subtitle.">
                     <h1 class="no-pointer-events drop-shadow-2px">Everything about Tim</h1>
                     <h2 class="no-pointer-events subtitle drop-shadow-2px">Totally Original Guestbook</h2>
                 </div>
                 <ul>
                     <li>
-                        <a href="https://github.com/KJB88/TechEd_SD-W04" class="drop-shadow-2px">Repo</a>
+                        <a href="https://github.com/KJB88/TechEd_SD-W04" class="drop-shadow-2px"
+                            aria-label="A link to access the repo for this website.">Repo</a>
                     </li>
                     <li>
-                        <a href="https://github.com/KJB88" class="drop-shadow-2px">Github</a>
+                        <a href="https://github.com/KJB88" class="drop-shadow-2px"
+                            aria-label="A link to access the Github of the author of this website.">Github</a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/kevin-barr1988/" class="drop-shadow-2px">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/kevin-barr1988/" class="drop-shadow-2px"
+                            aria-label="A link to access the LinkedIn of the author of this website.">LinkedIn</a>
                     </li>
                     <li>
-                        <a href="https://kjb88.github.io/" class="drop-shadow-2px">Website</a>
+                        <a href="https://kjb88.github.io/" class="drop-shadow-2px"
+                            aria-label="A link to access the Personal Website of the author of this website.">Website</a>
                     </li>
                 </ul>
             </nav>
@@ -59,9 +63,9 @@
     <!-- MAIN -->
     <main>
 
-        <!-- Description / Info Panel-->
         <section id="content-panel"
             aria-label="The main content panel of the site containing a description, input form to post your message and a log displaying any messages already in the guest book.">
+            <!-- Description / Info Panel-->
             <section class="info-panel"
                 aria-label="A description of the site's use case. One man's obsession for another.">
                 <article class="drop-shadow-2px no-pointer-events">
@@ -70,15 +74,18 @@
             </section>
 
             <!-- Input Form -->
-            <section aria-label="The input form to post messages to the guestbook.">
-                <form id="input-form" class="drop-shadow-2px">
-                    <label for="name-input" class="drop-shadow-2px form-label no-pointer-events">Name</label>
+            <section>
+                <form id="input-form" class="drop-shadow-2px"
+                    aria-label="The input form to post messages to the guestbook.">
+                    <label for="name-input" class="drop-shadow-2px form-label">Name</label>
                     <input name="name" id="name-input" class="drop-shadow-2px" type="text" label="Name:"
-                        placeholder="Type your name in here!" />
-                    <label for="message-input" class="drop-shadow-2px form-label no-pointer-events">Message</label>
+                        placeholder="Type your name in here!" aria-label="The input field to write your name!" />
+                    <label for="message-input" class="drop-shadow-2px form-label">Message</label>
                     <textarea name="message" id="message-input" class="drop-shadow-2px" rows="4" cols="20"
-                        placeholder="Type your message here!"></textarea>
-                    <button id="submit-btn" class="drop-shadow-2px">Post</button>
+                        placeholder="Type your message here!"
+                        aria-label="The text area to write your message!"></textarea>
+                    <button id="submit-btn" class="drop-shadow-2px"
+                        aria-label="The button to post your message.">Post</button>
                 </form>
             </section>
 
